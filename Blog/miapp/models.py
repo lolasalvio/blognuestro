@@ -1,4 +1,3 @@
-from django.db import models
 from operator import truediv
 from pyexpat import model
 from statistics import mode
@@ -16,8 +15,7 @@ class BlogModel(models.Model):
     def __str__(self):
         return self.titulo
 
+
 # Create your models here.
-
-
 
 
