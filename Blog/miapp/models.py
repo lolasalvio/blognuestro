@@ -15,6 +15,9 @@ class BlogModel(models.Model):
     def __str__(self):
         return self.titulo
 
+#class BlogIndex(models.Model):
+        #template_name = "blog/template/index.html"
+
 
 # Create your models here.
 
