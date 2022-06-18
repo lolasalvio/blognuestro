@@ -20,12 +20,10 @@ from miapp import views
 from django.conf.urls import include
 
 urlpatterns = [
-    path('miapp/', include('blog.urls')),
-    path('admin/', admin.site.urls),
-    path('index/', index),
-    path('nosotros/', nosotros),
-    path('register/', register),
+    #path('miapp/', include('blog.urls')),
+    #path('admin/', admin.site.urls),
+    #path('index/', index),
+    #path('nosotros/', nosotros),
+    #path('register/', register),
     path('blogs/', blogs),
-
-
 ]
