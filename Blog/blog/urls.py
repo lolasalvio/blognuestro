@@ -15,15 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from blog.views import index, nosotros, register, blogs
-from miapp import views
-from django.conf.urls import include
+#from blog.views import index, nosotros, register, blogs
+#from miapp import views
+#from django.conf.urls import include
 
 urlpatterns = [
     path('miapp/', include('miapp.urls')),
     path('admin/', admin.site.urls),
-    path('index/', index),
-    path('nosotros/', nosotros),
-    path('register/', register),
-    path('blogs/', blogs),
+    #path('index/', index),
+    #path('nosotros/', nosotros),
+    #path('register/', register),
+    #path('blogs/', blogs),
 ]
