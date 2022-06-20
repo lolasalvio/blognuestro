@@ -1,19 +1,20 @@
+from msilib.schema import ListView
 from django.shortcuts import render
 
 def index (request):
-    return render(request, "poronga/index.html")
+    return render(request, "pages/index.html")
 
 def blogs (request):
-    return render(request, "poronga/blogs.html")   
+    return render(request, "pages/blogs.html")   
 
 def nosotros (request):
-    return render(request, "poronga/nosotros.html")
+    return render(request, "pages/nosotros.html")
 
 def register(request):
-    return render(request, "poronga/register.html")
+    return render(request, "pages/register.html")
 
 ##from django.urls import reverse_lazy
-#from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+# from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 #from django.contrib.auth import login, logout, authenticate
 #from django.contrib.auth.forms import AuthenticationForm
 #from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -22,10 +23,9 @@ def register(request):
 #from django.contrib.messages.views import SuccessMessageMixin
 #from django.contrib.auth.forms import UserCreationForm
 
-#class index(ListView):
-
-    #model = IndexModel
-    #template_name = "blog/index.html"
+# class index(ListView):
+#     model = IndexModel
+#     template_name = "blog/index.html"
 
 
 #class BlogDetail(DetailView):
@@ -52,26 +52,26 @@ def register(request):
     #fields = ["titulo", "sub_titulo", "cuerpo"]
 
     #def test_func(self):
-     #   exist = BlogModel.objects.filter(autor=self.request.user.id, id=self.kwargs['pk'])
-     #  return True if exist else False
+    #   exist = BlogModel.objects.filter(autor=self.request.user.id, id=self.kwargs['pk'])
+    #  return True if exist else False
         
 
 
 #class BlogDelete(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
 
- #  model = BlogModel
- #   success_url = reverse_lazy("blog_list")
+#  model = BlogModel
+#   success_url = reverse_lazy("blog_list")
 
-  #  def test_func(self):
-   #     exist = BlogModel.objects.filter(autor=self.request.user.id, id=self.kwargs['pk'])
-    #    return True if exist else False
+#  def test_func(self):
+#     exist = BlogModel.objects.filter(autor=self.request.user.id, id=self.kwargs['pk'])
+#    return True if exist else False
 
 
 #class BlogLogin(LoginView):
- #   template_name = 'blog/blog_login.html'
-  #  next_page = reverse_lazy("blog_list")
+#   template_name = 'blog/blog_login.html'
+#  next_page = reverse_lazy("blog_list")
 
 
 #class BlogLogout(LogoutView):
- #   template_name = 'blog/blog_logout.html'
+#   template_name = 'blog/blog_logout.html'
 # Create your views here.
