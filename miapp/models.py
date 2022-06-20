@@ -6,18 +6,16 @@ from django.contrib.auth.models import User
 
 
 class BlogModel(models.Model):
-    titulo = models.CharField(max_length=100)
-    sub_titulo = models.CharField(max_length=100)
-    cuerpo = models.TextField()
-    autor = models.ForeignKey(User, on_delete=models.CASCADE)
-    fecha_creacion = models.DateField(auto_now_add=True)
-
-    def __str__(self):
-        return self.titulo
+        titulo = models.CharField(max_length=100)
+        sub_titulo = models.CharField(max_length=100)
+        cuerpo = models.TextField()
+        autor = models.ForeignKey(User, on_delete=models.CASCADE)
+        fecha_creacion = models.DateField(auto_now_add=True)
+        def __str__(self):
+                return self.titulo
 
 #class BlogIndex(models.Model):
         #template_name = "blog/template/index.html"
-
 
 # Create your models here.
 

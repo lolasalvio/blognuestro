@@ -51,12 +51,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'blog.urls'
+ROOT_URLCONF = 'miapp.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["miapp/templates/poronga"],
+        'DIRS': ["miapp/templates/pages"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

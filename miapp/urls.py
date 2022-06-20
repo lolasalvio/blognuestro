@@ -19,9 +19,9 @@ from miapp import views
 urlpatterns = [
 
     #path('admin/', admin.site.urls), VA A SER EL ADMIN DE DJANGO
-    #path('', views.index),
-    path('index/', views.index, name="Index"),
-    path('nosotros/', views.nosotros, name="Nosotros"),
+    path('', views.index, name="Index"),
+    # path('index/', views.index, name="Index"),
+    path('/nosotros', views.nosotros, name="Nosotros"),
     path('register/', views.register, name="Register"),
     path('blogs/', views.blogs, name="Blogs"),
 ]

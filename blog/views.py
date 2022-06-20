@@ -5,7 +5,7 @@ from django.template import loader
 
 
 #Class BlogList(listview):
-   # model = blogmodel
+    # model = blogmodel
     #template_name = "blog\index.html"
 
 #index = loader.get_template("index.html")
@@ -16,7 +16,6 @@ from django.template import loader
 
 def index(request):
     return HttpResponse("PAGINA BIENVENIDA")
-
 
 def nosotros(request):
     return HttpResponse("ABOUT US")

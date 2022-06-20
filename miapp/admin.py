@@ -5,10 +5,10 @@ from miapp.views import blogs, index, register, nosotros
 # Register your models here.
 
 
-#admin.site.register(blogs)
+# admin.site.register(blogs)
 
-#admin.site.register(index)
+# admin.site.register(index)
 
-#admin.site.register(nosotros)
+# admin.site.register(nosotros)
 
-#admin.site.register(register)
+# admin.site.register(register)

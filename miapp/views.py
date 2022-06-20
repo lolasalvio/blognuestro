@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
 def index (request):
-    return render(request, "pages/index.html")
+    return render(request, "index.html")
 
 def blogs (request):
     return render(request, "pages/blogs.html")   
 
 def nosotros (request):
-    return render(request, "pages/nosotros.html")
+    return render(request, "/nosotros.html")
 
 def register(request):
     return render(request, "pages/register.html")
