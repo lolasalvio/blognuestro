@@ -16,17 +16,17 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html"><img src="https://via.placeholder.com/50" alt=""></a>
+                <a class="navbar-brand" href="{ % url 'index' % }"><img src="https://via.placeholder.com/50" alt=""></a>
                 <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">                        
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="{ % url 'index' % }">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./HTMLs/nosotros.html">Nosotros</a>
+                            <a class="nav-link" href="{ % url 'nosotros' % }">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./HTMLs/blogs.html">Blogs</a>
+                            <a class="nav-link" href="{ % url 'blogs' % }">Blogs</a>
                         </li>
                         <!-- Login modal -->
                         <div>
@@ -57,7 +57,7 @@
                                             </div>
                                             <div>
                                                 <p>No tiene usuario?<a class="form-check-label"
-                                                        href="./HTMLs/register.html">Regístrese aquí</a></p>
+                                                        href="{ % url 'register' % }">Regístrese aquí</a></p>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Ingresar</button>
                                         </form>
