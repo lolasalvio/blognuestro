@@ -1,0 +1,91 @@
+from django.shortcuts import redirect, render
+
+from miapp.models import BlogModel
+
+from miapp.forms import posteo #Importando BLogs de Django para no usar HTML
+
+def index (request):
+    return render(request, "index.html")
+
+def blogs (request):
+    if request.method == 'POST':
+        posteo = blogs (request.POST)
+        print(posteo)
+        if posteo.is_valid:
+            informacion = posteo.cleaned_data
+            posteo = BlogModel (titulo=informacion['posteo'], sub_titulo=informacion['sub_titulo'], cuerpo=informacion['cuerpo'])
+            posteo.save()
+            return render(request, "pages/blogs.html")   
+    else:
+        posteo=blogs()
+    return render(request, "pages/blogs.html", {"posteo":posteo})  
+
+def nosotros (request):
+    return render(request, "pages/nosotros.html")
+
+def register(request):
+    return render(request, "pages/register.html")
+
+##from django.urls import reverse_lazy
+#from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+#from django.contrib.auth import login, logout, authenticate
+#from django.contrib.auth.forms import AuthenticationForm
+#from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+#from django.contrib.auth.views import LoginView, LogoutView
+#from blog.models import BlogModel
+#from django.contrib.messages.views import SuccessMessageMixin
+#from django.contrib.auth.forms import UserCreationForm
+
+#class index(ListView):
+
+    #model = IndexModel
+    #template_name = "blog/index.html"
+
+
+#class BlogDetail(DetailView):
+
+    #model = BlogModel
+    #template_name = "blog/blog_detail.html"
+
+
+#class BlogCreate(LoginRequiredMixin, CreateView):
+
+    #model = BlogModel
+    #success_url = reverse_lazy("blog_list")
+    #fields = ["titulo", "sub_titulo", "cuerpo"]
+
+    #def form_valid(self, form):
+        #form.instance.autor = self.request.user
+        #return super().form_valid(form)
+
+
+#class BlogUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+
+    #model = BlogModel
+    #success_url = reverse_lazy("blog_list")
+    #fields = ["titulo", "sub_titulo", "cuerpo"]
+
+    #def test_func(self):
+     #   exist = BlogModel.objects.filter(autor=self.request.user.id, id=self.kwargs['pk'])
+     #  return True if exist else False
+        
+
+
+#class BlogDelete(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
+
+ #  model = BlogModel
+ #   success_url = reverse_lazy("blog_list")
+
+  #  def test_func(self):
+   #     exist = BlogModel.objects.filter(autor=self.request.user.id, id=self.kwargs['pk'])
+    #    return True if exist else False
+
+
+#class BlogLogin(LoginView):
+ #   template_name = 'blog/blog_login.html'
+  #  next_page = reverse_lazy("blog_list")
+
+
+#class BlogLogout(LogoutView):
+ #   template_name = 'blog/blog_logout.html'
+# Create your views here.
